@@ -20,53 +20,39 @@
     <h1>
       Homework 1 - Calculator
     </h1>
+    <!-- Calculator Body -->
+<div class="calc">
 
-    <!-- ส่วนหลักของเครื่องคิดเลข -->
-    <div id="calc">
-      <!-- ส่วนแสดงผลตัวเลข -->
-      <div id="outputPanel">
-        <input id="display" type="text" readonly> <br>
-      </div>
-      <br><br>
-
-      <!-- ส่วนปุ่มที่เอาไว้ใช้กด -->
-      <div id="inputPanel">
-
-        <!-- ปุ่มต่างๆ ที่มีค่า attribute id, class, type, value, onclick -->
-        <!--  id = ไอดีของปุ่มนั้นๆ
-              class = คลาสของปุ่มนั้นๆ
-              type = ชนิดของปุ่มนั้นๆ
-              value = ค่าตัวอักษรที่ใช้กำกับปุ่มนั้นๆ
-              onclick = เมื่อคลิกที่ปุ่มให้ทำอะไร
-                ตัวอย่าง onclick="oneClicked()" แปลว่าเมื่อคลิกให้เรียกฟังก์ชั่น oneClicked() ซึ่งเราประกาศไว้ในไฟล์ javascript
-        -->
-
-        <!-- คำสั่ง ให้นร.แก้ไขไฟล์ HTML นี้ให้มีหน้าจอแสดงผลสวยงามตามที่โปรแกรมเครื่องคิดเลขควรจะเป็น
-              ตัวอย่างสามารถดูได้ในโปรแกรม calculator ใน windows
-        -->
-        <input id="one" class="bt bt-num" type="button" value="1" onclick="oneClicked()">
-        <input id="two" class="bt bt-num" type="button" value="2" onclick="twoClicked()">
-        <input id="three" class="bt bt-num" type="button" value="3" onclick="threeClicked()">
-        <input id="four" class="bt bt-num" type="button" value="4" onclick="fourClicked()">
-        <input id="five" class="bt bt-num" type="button" value="5" onclick="fiveClicked()">
-        <input id="six" class="bt bt-num" type="button" value="6" onclick="sixClicked()">
-        <input id="seven" class="bt bt-num" type="button" value="7" onclick="sevenClicked()">
-        <input id="eight" class="bt bt-num" type="button" value="8" onclick="eightClicked()">
-        <input id="nine" class="bt bt-num" type="button" value="9" onclick="nineClicked()">
-        <input id="zero" class="bt bt-num" type="button" value="0" onclick="zeroClicked()">
-        <input id="dot" class="bt bt-num" type="button" value="." onclick="dotClicked()">
-        <input id="plus" class="bt bt-ops" type="button" value="+" onclick="plusClicked()">
-        <input id="minus" class="bt bt-ops" type="button" value="-" onclick="minusClicked()">
-        <input id="multiply" class="bt bt-ops" type="button" value="x" onclick="multiplyClicked()">
-        <input id="divide" class="bt bt-ops" type="button" value="÷" onclick="divideClicked()">
-        <input id="equal" class="bt bt-ops" type="button" value="=" onclick="equalClicked()">
-        <input id="del" class="bt bt-del" type="button" value="del" onclick="delClicked()">
-        <input id="clear" class="bt bt-clear" type="button" value="C" onclick="clearClicked()">
-        <!-- Optional buttons ส่วนข้างล่างนี้จะทำหรือไม่ทำก็ได้ -->
-        <input id="parenthesis-open" class="bt bt-optional" type="button" value="(" onclick="poClicked()">
-        <input id="parenthesis-close" class="bt bt-optional" type="button" value=")" onclick="pcClicked()">
-      </div>
-    </div>
+  <!-- Calculator Display Screen -->
+  <div class="outputPanel">
+      <input id="display" type="text" readonly>
+      <input id="display_result" type="text" readonly>
+  </div>
+  
+  <!-- Calculator Buttons -->
+  <div class="inputPanel">
+      <input id="clear" class="bt-clear" type="button" value="C" onclick="clearClicked()">
+      <input id="parenthesis-open" class="bt-optional" type="button" value="(" onclick="buttonclick(this.value)">
+      <input id="parenthesis-close" class="bt-optional" type="button" value=")" onclick="buttonclick(this.value)">
+      <input id="divide" class="bt-ops" type="button" value="/" onclick="buttonclick(this.value)">
+      <input id="seven" class="bt-num" type="button" value="7" onclick="buttonclick(this.value)">
+      <input id="eight" class="bt-num" type="button" value="8" onclick="buttonclick(this.value)">
+      <input id="nine" class="bt-num" type="button" value="9" onclick="buttonclick(this.value)">
+      <input id="multiply" class="bt-ops" type="button" value="*" onclick="buttonclick(this.value)">
+      <input id="four" class="bt-num" type="button" value="4" onclick="buttonclick(this.value)">
+      <input id="five" class="bt-num" type="button" value="5" onclick="buttonclick(this.value)">
+      <input id="six" class="bt-num" type="button" value="6" onclick="buttonclick(this.value)">
+      <input id="minus" class="bt-ops" type="button" value="-" onclick="buttonclick(this.value)">
+      <input id="one" class="bt-num" type="button" value="1" onclick="buttonclick(this.value)">
+      <input id="two" class="bt-num" type="button" value="2" onclick="buttonclick(this.value)">
+      <input id="three" class="bt-num" type="button" value="3" onclick="buttonclick(this.value)">
+      <input id="plus" class="bt-ops" type="button" value="+" onclick="buttonclick(this.value)">
+      <input id="zero" class="bt-num" type="button" value="0" onclick="buttonclick(this.value)">
+      <input id="dot" class="bt-num" type="button" value="." onclick="buttonclick(this.value)">
+      <input id="del" class="bt-del" type="button" value="del" onclick="delClicked()">
+      <input id="equal" class="bt-ops" type="button" value="=" onclick="equalClicked()">
+  </div>
+</div>
   </body>
 </html>
 
