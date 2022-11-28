@@ -4,6 +4,8 @@
     Reference: https://www.w3schools.com/jsrEF/default.asp
 */
 
+//test
+
 var DEBUG = true;
 
 // ตัวอย่างการประกาศตัวแปรในภาษา javascript
