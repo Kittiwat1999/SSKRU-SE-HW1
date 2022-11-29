@@ -18,22 +18,15 @@ function dbg()
 function buttonclick(b_value)
 {
     dbg(b_value+" is clicked");
-    if(document.getElementById("display_result").value == ""){
-        currentOutput += b_value;
-        document.getElementById("display").value = currentOutput;
-    }else{
         currentOutput += b_value;
         document.getElementById("display_result").value = currentOutput;
-    }
 }
 
 function equalClicked()
 {
     dbg("= is clicked");
-    if(document.getElementById("display_result").value != ""){
-        document.getElementById("display").value = currentOutput;
-    }
-    document.getElementById("display_result").value = "= "+eval(currentOutput);
+    document.getElementById("display").value = currentOutput+" =";
+    document.getElementById("display_result").value = eval(currentOutput);
     currentOutput = eval(currentOutput).toString();
     dbg("ค่าของ currentOutput คือ ", currentOutput);
 }
